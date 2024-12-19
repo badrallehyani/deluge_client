@@ -82,8 +82,7 @@ class MyDelugeClient:
 
             "id": req_id
         }
-        
-        response = self.session.post(self.json_url, json = data).json()
+        response = self.session.post(self.json_url, json = data, timeout = 5).json()
         return response
 
 
